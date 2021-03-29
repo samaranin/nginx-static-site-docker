@@ -33,11 +33,11 @@ networks:
     external:
       name: nginx-proxy
 ```  
-- `ports: - "80:80"` - uncomment this section to use port forwarding (not recomended when using with [nginx-proxy](https://github.com/samaranin/nginx-proxy))   
+- `ports: - "80:80"` - uncomment this section to use port forwarding (not recomended when using with [nginx-proxy](https://github.com/samaranin/nginx-proxy) service)   
 
-- `VIRTUAL_HOST, LETSENCRYPT_HOST, LETSENCRYPT_EMAIL` - environments parameters to use with [nginx-proxy](https://github.com/samaranin/nginx-proxy) repository (more information find there).  
+- `VIRTUAL_HOST, LETSENCRYPT_HOST, LETSENCRYPT_EMAIL` - environments parameters to use with [nginx-proxy](https://github.com/samaranin/nginx-proxy) service (more information find there).  
 
-- `networks: default: external: name: nginx-proxy` - external network to user with  [nginx-proxy](https://github.com/samaranin/nginx-proxy) repository (more information find there).   
+- `networks: default: external: name: nginx-proxy` - external network to user with  [nginx-proxy](https://github.com/samaranin/nginx-proxy) service (more information find there).   
 
 ### nginx.conf   
 
