@@ -1,0 +1,22 @@
+services:
+    web:
+        image: nginx:latest
+        restart: always
+        container_name: default.container
+        #ports:
+        #   - "80:80"
+        volumes:
+            - ./code:/code
+            - ./nginx.conf:/etc/nginx/conf.d/default.conf
+        environment:
+            VIRTUAL_HOST: site.com,www.site.com
+            LETSENCRYPT_HOST: site.com
+            LETSENCRYPT_EMAIL: admin@site.com
+        expose:
+            - 80
+            - 443
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
