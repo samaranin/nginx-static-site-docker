@@ -10,6 +10,8 @@ $: docker-compose up -d
 ### docker-compose.yaml   
 
 ```yaml
+version: '3'
+
 services:
     web:
         image: nginx:latest
